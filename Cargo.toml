@@ -1,6 +1,6 @@
 [package]
 name = "tinosrse-tools"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "TinosRSE tools is a CLI tool suite for compiling TinosRSE."
 license = "MIT"
