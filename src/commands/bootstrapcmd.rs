@@ -11,13 +11,13 @@ pub fn handle_bootstrap() {
 
     println!("Bootstrapping tinosRSE-Development...");
 
-    println!("Installing Systempackages (build-essential, llvm, mtools, genisoimage)...");
+    println!("Installing Systempackages (build-essential, llvm, mtools, grub-pc-bin)...");
     let apt_status = Command::new("sudo")
         .args(&["apt-get", "update", "-y"])
         .status()
         .and_then(|_| {
             Command::new("sudo")
-                .args(&["apt-get", "install", "-y", "build-essential", "llvm", "mtools", "genisoimage"])
+                .args(&["apt-get", "install", "-y", "build-essential", "llvm", "mtools", "grub-pc-bin"])
                 .status()
         });
 
