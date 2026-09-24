@@ -49,12 +49,6 @@ fn handle_bootstrap() {
     let args: Vec<String> = env::args().collect();
     let prog = &args[0];
 
-    if cfg!(target_os = "windows") {
-        eprintln!("Error: This tool doesn't support native Windows platform");
-        eprintln!("   Please use WSL instead.");
-        std::process::exit(1);
-    }
-
     println!("Bootstrapping tinosRSE-Development...");
 
     println!("Installing Systempackages (build-essential, llvm, mtools, genisoimage)...");
