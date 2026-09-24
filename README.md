@@ -12,7 +12,12 @@ cargo install tinosrse-tools
 ```
 
 Or set up from source:
-Coming soon
+```shell
+git clone https://github.com/Tin-Systems-Platform/tinosrse-tools # Clone the repository using GIT
+cd tinosrse-tools # go to the cloned folder
+cargo build # Build the source
+cargo install --path . # install from source
+```
 
 ### Requirements
 The platform requirement is very strict as of now and will probably grow as this gets developed.
