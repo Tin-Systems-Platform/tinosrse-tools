@@ -124,7 +124,7 @@ fn handle_run(gui: bool) {
     let bios_path = target_dir.join("debug/build"); 
 
     println!("Starting TinosRSE...");
-    let mut cargo = Command::new("cargo");
+    let mut cargo = Command::new("cargo").args(&["run", "bios"]);
     
     
 
