@@ -18,9 +18,7 @@ struct TinosArgs {
 
 #[derive(Subcommand)]
 enum TinosCommand {
-    Bootstrap {
-        name: String,
-    },
+    Bootstrap,
     Build,
     Run {
         #[arg(long)]
@@ -33,7 +31,7 @@ fn main() {
     let CargoCli::Tinos(args) = CargoCli::parse();
 
     match args.command {
-        TinosCommand::Bootstrap { name } => handle_bootstrap(),
+        TinosCommand::Bootstrap => handle_bootstrap(),
         TinosCommand::Build => { handle_build(); },
         TinosCommand::Run { gui } => handle_run(gui),
         TinosCommand::Iso => handle_iso(),
@@ -70,7 +68,7 @@ fn handle_bootstrap() {
         }
     }
 
-    println!("🦀 Installing Rust-tools and targets...");
+    println!("Installing Rust-tools and targets...");
 
     let llvm_tools = Command::new("rustup")
         .args(&["component", "add", "llvm-tools-preview"])
