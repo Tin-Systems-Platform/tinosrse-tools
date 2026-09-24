@@ -28,6 +28,13 @@ enum TinosCommand {
 }
 
 fn main() {
+    // Don't allow windows execution at all. Due to some packages not having windows equivalents
+    if cfg!(target_os = "windows") {
+        eprintln!("Error: This tool doesn't support native Windows platform");
+        eprintln!("   Please use WSL instead.");
+        std::process::exit(1);
+    }
+
     let CargoCli::Tinos(args) = CargoCli::parse();
 
     match args.command {
