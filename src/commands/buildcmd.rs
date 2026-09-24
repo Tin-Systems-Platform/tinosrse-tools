@@ -1,7 +1,5 @@
 use std::process::Command;
-use std::path::{Path, PathBuf};
-use clap::{Parser, Subcommand};
-use std::env;
+use std::path::PathBuf;
 
 pub fn handle_build() -> PathBuf {
     println!("Compiling TinosRSE...");
