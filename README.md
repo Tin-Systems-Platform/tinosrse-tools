@@ -23,7 +23,7 @@ cargo install --path . # install from source
 The platform requirement is very strict as of now and will probably grow as this gets developed.
 
 For now though following is the requirements:
-OS: Linux with the APT package manager
+OS: Linux with Nix installed
 Rust, cargo.
 
 ### Using the tool
